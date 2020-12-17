@@ -122,10 +122,10 @@
       </h3>
       {% for post in posts.all %}
       <article class="blog-post">
-        <h2 class="blog-post-title">{{ post.title }}</h2>
+        <a href=""><h2 class="blog-post-title">{{ post.title }}</h2></a>
         <p class="blog-post-meta">{{ post.date }}</p>
-        <img class="img-fluid rounded" src="{{ post.image.url }}" alt="">
-        <p>{{ post.text }}</p>
+        <img class="img-fluid rounded" src="{{ post.image.url }}" alt="" width="400">
+        <p>{{ post.get_summary }}</p>
       </article><!-- /.blog-post -->
       {% endfor %}
      

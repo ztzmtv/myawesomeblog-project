@@ -21,6 +21,6 @@ import events.views
 
 urlpatterns = [
                   path('admin/', admin.site.urls),
-                  path('', events.views.home, name='home'),
-                  path('posts/', include('blog.urls')),
+                  path('', events.views.home, name='home'), #функция из views home
+                  path('posts/', include('blog.urls')),  #urls из приложения posts
               ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
